@@ -1,5 +1,6 @@
-Changes made to the to url 
-Now compatible with django 1.11
+Changes made to the to url Now compatible with django 1.11
+
+
 =================================
 Datacash package for django-oscar
 =================================
