@@ -5,7 +5,7 @@ from .the3rdman import views
 
 
 # Responses from the3rdman are posted back
-urlpatterns = patterns('',
+urlpatterns = [
     url(r'^the3rdman/', csrf_exempt(views.CallbackView.as_view()),
         name='datacash-3rdman-callback'),
-)
+]
