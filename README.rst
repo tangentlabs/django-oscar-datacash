@@ -1,3 +1,6 @@
+Changes made to the to url Now compatible with django 1.11
+
+
 =================================
 Datacash package for django-oscar
 =================================
@@ -43,7 +46,7 @@ From PyPi::
 
 or from Github::
 
-    pip install git+git://github.com/tangentlabs/django-oscar-datacash.git#egg=django-oscar-datacash
+    pip install git+git://github.com/ldonjibson/django-oscar-datacash.git#egg=django-oscar-datacash
 
 Add ``'datacash'`` to ``INSTALLED_APPS`` and run::
 

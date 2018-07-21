@@ -1,4 +1,4 @@
-from django.conf.urls import patterns, url
+from django.conf.urls import url
 from django.contrib.admin.views.decorators import staff_member_required
 
 from oscar.core.application import Application
@@ -13,14 +13,14 @@ class DatacashDashboardApplication(Application):
     fraud_list_view = views.FraudResponseListView
 
     def get_urls(self):
-        urlpatterns = patterns('',
+        urlpatterns = [
             url(r'^transactions/$', self.list_view.as_view(),
                 name='datacash-transaction-list'),
             url(r'^transactions/(?P<pk>\d+)/$', self.detail_view.as_view(),
                 name='datacash-transaction-detail'),
             url(r'^fraud-responses/$', self.fraud_list_view.as_view(),
                 name='datacash-fraud-response-list'),
-        )
+        ]
         return self.post_process_urls(urlpatterns)
 
     def get_url_decorator(self, url_name):
